@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Project",
+    "github_url": "https://somegithuburl.com/",
+    "demo_url": "https://somedemo.com/",
+    "image": "./images/image_example.jpg",
+    "description": ""
+  },
+  {
+    "title": "Another Project",
+    "github_url": "",
+    "demo_url": "",
+    "image": "",
+    "description": ""
+  },
+  {
+    "title": "Yet Another Project",
+    "github_url": "",
+    "demo_url": "",
+    "image": "",
+    "description": ""
+  }
+]
