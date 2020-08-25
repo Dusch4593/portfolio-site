@@ -1,10 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Official Portfolio Website | Brandon Dusch`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    keywords: ['software engineer', 'software developer', 'web developer', 'portfolio', 'projects']
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'project',
+        path: './data'
+      }
+    },
+    'gatsby-transformer-json',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
