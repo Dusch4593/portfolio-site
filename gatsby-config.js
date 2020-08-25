@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Official Portfolio Website | Brandon Dusch`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Brandon Dusch, Software Engineer - Official Portfolio Website`,
+    description: `Portfolio site powered by Gatsby. Showcase for software engineering projects.`,
+    author: `Brandon Dusch`,
     keywords: ['software engineer', 'software developer', 'web developer', 'portfolio', 'projects']
   },
   plugins: [
