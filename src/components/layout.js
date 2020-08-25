@@ -18,14 +18,21 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
   `)
 
+  const siteTitle = data.site.siteMetadata.title
+  let menuLinks = data.site.siteMetadata.menuLinks
+
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <div>
+      <Header menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
       <div
         style={{
           margin: `0 auto`,
@@ -37,10 +44,10 @@ const Layout = ({ children }) => {
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> by Brandon Dusch
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
