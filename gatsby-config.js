@@ -1,6 +1,24 @@
 module.exports = {
   siteMetadata: {
     title: `Brandon Dusch, Software Engineer - Official Portfolio Website`,
+    menuLinks: [
+      {
+        name: 'home',
+        link: '/',
+      },
+      {
+        name: 'portfolio',
+        link: '/portfolio',
+      },
+      {
+        name: 'blog',
+        link: '/blog',
+      },
+      {
+        name: 'contact',
+        link: '/contact',
+      },
+    ],
     description: `Portfolio site powered by Gatsby. Showcase for software engineering projects.`,
     author: `Brandon Dusch`,
     keywords: ['software engineer', 'software developer', 'web developer', 'portfolio', 'projects']
@@ -33,7 +51,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `./src/images/favicon_portfolio_site_logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
