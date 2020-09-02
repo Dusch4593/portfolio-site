@@ -1,29 +1,16 @@
 module.exports = {
-  siteMetadata: {
-    title: `Brandon Dusch, Software Engineer - Official Portfolio Website`,
-    menuLinks: [
-      {
-        name: 'home',
-        link: '/',
-      },
-      {
-        name: 'portfolio',
-        link: '/portfolio',
-      },
-      {
-        name: 'blog',
-        link: '/blog',
-      },
-      {
-        name: 'contact',
-        link: '/contact',
-      },
-    ],
-    description: `Portfolio site powered by Gatsby. Showcase for software engineering projects.`,
-    author: `Brandon Dusch`,
-    keywords: ['software engineer', 'software developer', 'web developer', 'portfolio', 'projects']
-  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-material-ui',
+      options: {},
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -32,7 +19,6 @@ module.exports = {
       }
     },
     'gatsby-transformer-json',
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -58,4 +44,28 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  siteMetadata: {
+    title: `Brandon Dusch, Software Engineer - Official Portfolio Website`,
+    menuLinks: [
+      {
+        name: 'home',
+        link: '/',
+      },
+      {
+        name: 'portfolio',
+        link: '/portfolio',
+      },
+      {
+        name: 'blog',
+        link: '/blog',
+      },
+      {
+        name: 'contact',
+        link: '/contact',
+      },
+    ],
+    description: `Portfolio site powered by Gatsby. Showcase for software engineering projects.`,
+    author: `Brandon Dusch`,
+    keywords: ['software engineer', 'software developer', 'web developer', 'portfolio', 'projects']
+  },
 }
