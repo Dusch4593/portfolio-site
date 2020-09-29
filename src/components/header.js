@@ -6,7 +6,6 @@ const Header = ({ menuLinks }) => (
   <header
     style={{
       background: `#ccdbee`,
-      marginBottom: `1.45rem`,
     }}
   >
     <div
