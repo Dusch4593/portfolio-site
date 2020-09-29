@@ -9,6 +9,7 @@ class Blog extends Component {
     return (
       <Layout>
         <SEO title="Blog" />
+        <strong>TODO: Add blog code here (display 3 most recent posts? simple info card with link to blog?)</strong>
       </Layout>
     )
   }
