@@ -1,10 +1,10 @@
+/*Beginning of default styling*/
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  font-family: 'Baumans';
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -625,3 +625,59 @@ pre tt:after {
   font-weight: 400;
   src: local('Baumans'), local('Baumans-Regular'), url(http://themes.googleusercontent.com/static/fonts/baumans/v2/BiCYinjVo5CiJRvPKlJf5g.ttf) format('truetype');
 }
+/*End of default styling*/
+
+
+/*Beginning of custom styling*/
+nav {
+  margin: auto;
+}
+
+.about-section {
+  display: grid;
+  grid-template-areas:
+    "profile-pic jetty"
+    "about-info about-info";
+}
+
+.about-images {
+  border-radius: 0.5rem;
+  height: 50%;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.about-info {
+  grid-area: about-info;
+  padding: 0px 1.0875rem 1.45rem;
+}
+
+.about-info > h1 {
+  text-align: center;
+}
+
+.image-grid {
+  border: 1px solid red;
+  display: grid;
+}
+
+.jetty_provincetown_ma_image {
+  grid-area: jetty;
+  grid-column: 1/3;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.brandon_dusch_profile_image {
+  border: 1px solid red;
+  position: relative;
+  grid-area: profile-pic;
+  grid-column: 1/3;
+  overflow: hidden;
+  margin: 1em auto;
+  width: 25%;
+  height: 38%;
+  border-radius: 50%;
+}
+/*End of custom styling*/
