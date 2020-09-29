@@ -9,6 +9,7 @@ class Contact extends Component {
     return (
       <Layout>
         <SEO title="Contact" />
+        <strong>TODO: Add contact code here (email form? links to social media?)</strong>
       </Layout>
     )
   }

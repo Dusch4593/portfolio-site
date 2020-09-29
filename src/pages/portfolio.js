@@ -9,6 +9,7 @@ class Portfolio extends Component {
     return (
       <Layout>
         <SEO title="Portfolio" />
+        <strong>TODO: Add portfolio code here (iterate through each project in data/projects.json)</strong>
       </Layout>
     )
   }
