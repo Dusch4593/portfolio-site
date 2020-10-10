@@ -8,6 +8,8 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
+
+// Set up our base styles using Material UI
 const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -25,18 +27,9 @@ const useStyles = makeStyles({
 const IndexPage = () => {
   const classes = useStyles()
 
-  const data = useStaticQuery(graphql`
-    query profileQueryAndMyQuery {
+  const imageData = useStaticQuery(graphql`
+    query jettyImageQuery {
     jetty_provincetown_ma: file(relativePath: {eq: "jetty_provincetown_ma_image.jpg"}) {
-      id
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-
-    brandon_dusch_profile: file(relativePath: {eq: "brandon_dusch_profile_image.jpg"}) {
       id
       childImageSharp {
         fluid {
@@ -46,22 +39,20 @@ const IndexPage = () => {
     }
   }
   `)
+
   return (
     <Layout>
       <SEO title="Home" />
       <section className="about-section">
-
-          <Img className="about-images jetty_provincetown_ma_image" fluid={data.jetty_provincetown_ma.childImageSharp.fluid} alt="Cape Code Lighthouse" />
-          <Img className="about-images brandon_dusch_profile_image" fluid={data.brandon_dusch_profile.childImageSharp.fluid} alt="Brandon Dusch Profile" />
-
-        <div className="about-info">
-          <h1>Hi! I'm Brandon!</h1>
-          <p>
-            Creative, dedicated software engineer based in Cape Cod, Massachussets, USA and living in North Chatham. <br />
-            I'm a self-directed learner who enjoys solving interesting and complex problems. I also enjoy collaborating with <br />
-            others on fun, challenging projects.
-          </p>
-        </div>
+          <Img className="about-images jetty_provincetown_ma_image" fluid={imageData.jetty_provincetown_ma.childImageSharp.fluid} alt="Cape Code Lighthouse" />
+          <div className="about-info">
+            <h1>Hi! I'm Brandon!</h1>
+            <p>
+              Creative, dedicated software engineer based in Cape Cod, Massachussets, USA and living in North Chatham. <br />
+              I'm a self-directed learner who enjoys solving interesting and complex problems. I also enjoy collaborating with <br />
+              others on fun, challenging projects.
+            </p>
+          </div>
       </section>
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
     </Layout>
