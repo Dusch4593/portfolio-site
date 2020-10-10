@@ -32,20 +32,21 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <Header menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: '100%',
-          padding: `0`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> by Brandon Dusch
-        </footer>
+      <div className="main-grid">
+        <Header className="main-menu" menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
+        <div
+          style={{
+            maxWidth: '100%',
+            padding: `0`,
+          }}
+        >
+          <main className="main-content">{children}</main>
+          <footer className="footer">
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> by Brandon Dusch
+          </footer>
+        </div>
       </div>
     </div>
   )
