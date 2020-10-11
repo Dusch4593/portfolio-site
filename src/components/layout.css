@@ -661,6 +661,16 @@ li:first-child img {
   grid-area: mainContent
 }
 
+.project-image {
+  border-radius: 0.5em;
+  margin-left: 1em;
+  width: 75%;
+}
+
+.project-info {
+  margin-left: 1em;
+}
+
 .footer {
   grid-area: footer
 }

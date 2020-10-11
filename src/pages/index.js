@@ -27,9 +27,9 @@ const useStyles = makeStyles({
 const IndexPage = () => {
   const classes = useStyles()
 
-  const imageData = useStaticQuery(graphql`
+  const query = useStaticQuery(graphql`
     query jettyImageQuery {
-    jetty_provincetown_ma: file(relativePath: {eq: "jetty_provincetown_ma_image.jpg"}) {
+    jetty_provincetown_ma: file(relativePath: {eq: "images/jetty_provincetown_ma_image.jpg"}) {
       id
       childImageSharp {
         fluid {
@@ -44,7 +44,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <section className="about-section">
-          <Img className="about-images jetty_provincetown_ma_image" fluid={imageData.jetty_provincetown_ma.childImageSharp.fluid} alt="Cape Code Lighthouse" />
+          <Img className="about-images jetty_provincetown_ma_image" fluid={query.jetty_provincetown_ma.childImageSharp.fluid} alt="Jetty, Provincetown, Ma" />
           <div className="about-info">
             <h1>Hi! I'm Brandon!</h1>
             <p>

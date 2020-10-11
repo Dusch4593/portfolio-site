@@ -9,7 +9,7 @@ class Contact extends Component {
     return (
       <Layout>
         <SEO title="Contact" />
-        <strong>TODO: Replace "contact" on nav bar with 3 or 4 links to various contact/ social media</strong>
+        <strong>TODO: Add 3 or 4 links for contact/ social media: email, LinkedIn, Twitter, etc..</strong>
       </Layout>
     )
   }
