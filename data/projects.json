@@ -1,23 +1,23 @@
 [
   {
-    "title": "Project",
+    "title": "Rails Fitness",
+    "github_url": "https://github.com/Dusch4593/flatiron_fitness_rails_app",
+    "demo_url": "",
+    "image": "./images/rails-fitness-image.jpg",
+    "description": ""
+  },
+  {
+    "title": "NYT Bestseller CLI",
     "github_url": "https://somegithuburl.com/",
     "demo_url": "https://somedemo.com/",
-    "image": "./images/image_example.jpg",
-    "description": ""
+    "image": "./images/nyt-bestseller-cli-image.jpg",
+    "description": "Users can search for the NYT Bestsellers List by date, filter by category and learn more"
   },
   {
-    "title": "Another Project",
+    "title": "Weather App",
     "github_url": "",
     "demo_url": "",
-    "image": "",
-    "description": ""
-  },
-  {
-    "title": "Yet Another Project",
-    "github_url": "",
-    "demo_url": "",
-    "image": "",
+    "image": "./images/weather-app-image.jpg",
     "description": ""
   }
 ]
