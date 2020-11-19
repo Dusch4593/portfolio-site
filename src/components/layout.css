@@ -631,13 +631,11 @@ pre tt:after {
 /*Beginning of custom styling*/
 nav {
   display: flex;
-  flex-direction: column;
   margin: auto;
 }
 
 nav ul {
   display: flex;
-  flex-direction: column;
 }
 
 li:first-child img {
@@ -648,22 +646,40 @@ li:first-child img {
 .main-grid {
   display: grid;
   grid-template-areas:
-    "mainMenu mainContent"
-    "mainMenu mainContent"
-    "footer footer"
+    "mainMenu"
+    "mainContent"
+    "footer";
 }
 
 .main-menu {
-  grid-area: mainMenu
+  grid-area: mainMenu;
 }
 
 .main-content {
-  grid-area: mainContent
+  background-color: fbf4e1;
+  grid-area: mainContent;
+  margin-top: 4.25em;
+  text-align: center;
+}
+
+.jetty_provincetown_ma_image {
+  margin: auto;
+}
+
+.jetty_provincetown_ma_image > picture > img{
+  border-radius: 5px;
+  margin: auto;
+  max-width: 100%;
+  max-height: 60%;
+}
+
+.about-info {
+  margin-left: 0.5em;
 }
 
 .project-image {
   border-radius: 0.5em;
-  margin-left: 1em;
+  margin: auto;
   width: 75%;
 }
 
