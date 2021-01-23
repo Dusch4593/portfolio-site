@@ -6,10 +6,18 @@
 }
 
 .headerTitle {
+    background: #5689c7;
+    border-radius: 0.1em;
+    color: #fff;
     display: flex;
     justify-content: flex-start;
-    margin: 0 auto;
+    margin: 0 auto 0 0;
     padding: 1rem;
+}
+
+.headerTitle:hover, .headerTitle:focus {
+    color: #ffd700;
+    transition: 0.3s;
 }
 
 .navWrapper {
@@ -26,10 +34,20 @@
 
 .navLinkListItem {
     list-style-type: none;
-    padding: 1rem;
-    margin-bottom: 0;
+    margin: 0 0.25em;
 }
 
+
+
 .navLink {
+    border: 1px solid transparent;
     color: #5689c7;
+    padding: 1em;
+}
+
+.navLink:hover, .navLink:focus {
+    background: #5689c7;
+    border-radius: 0.1em;
+    color: #fff;
+    transition: 0.3s;
 }

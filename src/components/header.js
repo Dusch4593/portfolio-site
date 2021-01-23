@@ -8,9 +8,14 @@ const Header = ({ menuLinks }) => {
   return (
     <header className={headerStyles.headerContainer}>
       <div className={headerStyles.navWrapper}>
-        <p className={headerStyles.headerTitle}>
+        <Link 
+          className={headerStyles.headerTitle} 
+          to={menuLinks[0].link}
+          target={menuLinks[0].target}
+          rel={menuLinks[0].rel}
+        >
           Brandon Dusch
-        </p>
+        </Link>
         <nav>
           <ul className={headerStyles.navLinkList}>
             
