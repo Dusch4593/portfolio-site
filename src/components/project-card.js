@@ -9,7 +9,7 @@ const ProjectCard = ({ demoURL, githubURL, imageData, title, description }) => {
       <div className={projectStyles.projectInfo}>
         <h2>{ title }</h2>
         <p>{ description }</p>
-        <a href={demoURL} rel="noopener noreferrer" target="_blank">View the demo</a> &nbsp;
+        <a href={demoURL} rel="noopener noreferrer" target="_blank">View the demo</a> &nbsp;||&nbsp;
         <a href={githubURL} rel="noopener noreferrer" target="_blank">View the source</a>
         <br/><br/><br/>
       </div>

@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ProjectCard from '../components/project-card.js'
 import { useStaticQuery, graphql } from "gatsby"
+import portfolioStyles from "../styles/portfolio.module.css"
 
 
 
@@ -35,25 +36,28 @@ const Portfolio = () => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      {projects.map(({node: project}) => {
-        const projectNo = project.projectNo
-        const title = project.title
-        const description = project.description
-        const demoURL = project.demo_url
-        const githubURL = project.github_url
-        const imageData = project.image.childImageSharp.fluid
-        
-        return (
-          <ProjectCard
-            key={projectNo}
-            title={title}
-            description={description}
-            demoURL={demoURL}
-            githubURL={githubURL}
-            imageData={imageData}
-          />
-        )
-      })}
+      <div className={portfolioStyles.portfolioWrapper}>
+        {projects.map(({node: project}) => {
+          const projectNo = project.projectNo
+          const title = project.title
+          const description = project.description
+          const demoURL = project.demo_url
+          const githubURL = project.github_url
+          const imageData = project.image.childImageSharp.fluid
+          
+          return (
+            <ProjectCard
+              key={projectNo}
+              title={title}
+              description={description}
+              demoURL={demoURL}
+              githubURL={githubURL}
+              imageData={imageData}
+            />
+          )
+        })}
+      </div>
+
     </Layout>
   )
 }
