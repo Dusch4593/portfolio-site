@@ -36,11 +36,14 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <div className={customLayoutStyles.mainGrid}>
         <Header className={customLayoutStyles.mainMenu} menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
+        <div>
+          &nbsp;
+        </div>
         <div className={customLayoutStyles.childWrapper}>
           <main className={customLayoutStyles.mainContent}>{children}</main>
           <footer className={footerStyles.footer}>
             © {new Date().getFullYear()}, Built with
-            <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> by Brandon Dusch
+            <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer"> &hearts; & Gatsby</a> by Brandon Dusch
           </footer>
         </div>
       </div>
