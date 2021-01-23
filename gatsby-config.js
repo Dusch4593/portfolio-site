@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `./src/images/favicon_portfolio_site_logo.png`, // This path is relative to the root of the site.
+        icon: `./data/images/brandon_dusch_profile_image.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
   let menuLinks = data.site.siteMetadata.menuLinks
 
   return (
-    <div>
+    <React.Fragment>
       <div className="main-grid">
         <Header className="main-menu" menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
         <div
@@ -43,12 +43,11 @@ const Layout = ({ children }) => {
           <main className="main-content">{children}</main>
           <footer className="footer">
             © {new Date().getFullYear()}, Built with
-            {` `}
             <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> by Brandon Dusch
           </footer>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 

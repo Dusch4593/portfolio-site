@@ -8,14 +8,14 @@
   },
   {
     "title": "NYT Bestseller CLI",
-    "github_url": "https://somegithuburl.com/",
-    "demo_url": "https://somedemo.com/",
+    "github_url": "https://github.com/Dusch4593/nyt_bestsellers_cli",
+    "demo_url": "",
     "image": "./images/nyt-bestseller-cli-image.jpg",
     "description": "Users can search for the NYT Bestsellers List by date, filter by category and learn more"
   },
   {
     "title": "Weather App",
-    "github_url": "",
+    "github_url": "https://github.com/Dusch4593/weather-app",
     "demo_url": "",
     "image": "./images/weather-app-image.jpg",
     "description": ""
