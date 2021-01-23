@@ -626,3 +626,15 @@ pre tt:after {
   src: local('Baumans'), local('Baumans-Regular'), url(http://themes.googleusercontent.com/static/fonts/baumans/v2/BiCYinjVo5CiJRvPKlJf5g.ttf) format('truetype');
 }
 /*End of default styling*/
+
+/* Beginning of custom styling */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+/* End of custom styling */

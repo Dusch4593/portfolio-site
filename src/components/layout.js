@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import customLayoutStyles from "../styles/layout.module.css"
+import footerStyles from "../styles/footer.module.css"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -37,7 +38,7 @@ const Layout = ({ children }) => {
         <Header className={customLayoutStyles.mainMenu} menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
         <div className={customLayoutStyles.childWrapper}>
           <main className={customLayoutStyles.mainContent}>{children}</main>
-          <footer className="footer">
+          <footer className={footerStyles.footer}>
             © {new Date().getFullYear()}, Built with
             <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> by Brandon Dusch
           </footer>

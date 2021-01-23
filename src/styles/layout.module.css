@@ -18,6 +18,8 @@
 }
 
 .childWrapper {
+    position: relative;
+    min-height: 100vh;
     max-width: 100%;
     padding: 0;
 }
