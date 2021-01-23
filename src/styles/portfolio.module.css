@@ -1,0 +1,9 @@
+.projectImage {
+    border-radius: 0.5em;
+    margin: auto;
+    width: 75%;
+  }
+  
+  .projectInfo {
+    margin-left: 1em;
+  }

@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import customLayoutStyles from "../styles/layout.module.css"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -32,15 +33,10 @@ const Layout = ({ children }) => {
 
   return (
     <React.Fragment>
-      <div className="main-grid">
-        <Header className="main-menu" menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
-        <div
-          style={{
-            maxWidth: '100%',
-            padding: `0`,
-          }}
-        >
-          <main className="main-content">{children}</main>
+      <div className={customLayoutStyles.mainGrid}>
+        <Header className={customLayoutStyles.mainMenu} menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
+        <div className={customLayoutStyles.childWrapper}>
+          <main className={customLayoutStyles.mainContent}>{children}</main>
           <footer className="footer">
             © {new Date().getFullYear()}, Built with
             <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> by Brandon Dusch

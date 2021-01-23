@@ -1,0 +1,27 @@
+.mainGrid {
+    display: grid;
+    grid-template-areas:
+      "mainMenu"
+      "mainContent"
+      "footer";
+}
+
+.mainMenu {
+    grid-area: mainMenu;
+}
+  
+.mainContent {
+    background-color: fbf4e1;
+    grid-area: mainContent;
+    margin-top: 4.25em;
+    text-align: center;
+}
+
+.childWrapper {
+    max-width: 100%;
+    padding: 0;
+}
+
+.footer {
+    grid-area: footer
+}

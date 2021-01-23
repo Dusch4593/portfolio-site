@@ -2,62 +2,30 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import headerStyles from "../styles/header.module.css"
 
 const Header = ({ menuLinks }) => {
   return (
-    <header
-      style={{
-        background: `#ccdbee`,
-        position: "fixed",
-        width: "100%",
-        zIndex: "1",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          margin: `0 auto`,
-          maxWidth: 960,
-        }}
-      >
-        <p
-          style={{
-            display: "flex",
-            justifyContent: "flex-start",
-            margin: "0 auto",
-            padding: "1rem"
-          }}
-        >
+    <header className={headerStyles.headerContainer}>
+      <div className={headerStyles.navWrapper}>
+        <p className={headerStyles.headerTitle}>
           Brandon Dusch
         </p>
         <nav>
-          <ul
-            style={{
-              display: "flex",
-              flex: 1,
-            }}
-          >
+          <ul className={headerStyles.navLinkList}>
             
-            {menuLinks.map(link => (
+            {menuLinks.map(linkData => (
               <li
-                key={link.name}
-                style={{
-                  listStyleType: "none",
-                  padding: "1rem",
-                  marginBottom: "0"
-                }}
+                key={linkData.name}
+                className={headerStyles.navLinkListItem}
               >
                 <Link
-                  style={{
-                    color: "#5689c7",
-                  }}
-                  to={link.link}
-                  target={link.target}
-                  rel={link.rel}
+                  className={headerStyles.navLink}
+                  to={linkData.link}
+                  target={linkData.target}
+                  rel={linkData.rel}
                 >
-                  
-                  {link.name}
+                  {linkData.name}
                 </Link>
               </li>
             ))}
