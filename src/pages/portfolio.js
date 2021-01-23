@@ -36,14 +36,16 @@ const Portfolio = () => {
     <Layout>
       <SEO title="Portfolio" />
       {projects.map(({node: project}) => {
+        const projectNo = project.projectNo
         const title = project.title
         const description = project.description
         const demoURL = project.demo_url
         const githubURL = project.github_url
         const imageData = project.image.childImageSharp.fluid
-
+        
         return (
           <ProjectCard
+            key={projectNo}
             title={title}
             description={description}
             demoURL={demoURL}

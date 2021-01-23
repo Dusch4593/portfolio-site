@@ -1,5 +1,6 @@
 [
   {
+    "projectNo": 1,
     "title": "Rails Fitness",
     "github_url": "https://github.com/Dusch4593/flatiron_fitness_rails_app",
     "demo_url": "",
@@ -7,6 +8,7 @@
     "description": ""
   },
   {
+    "projectNo": 2,
     "title": "NYT Bestseller CLI",
     "github_url": "https://github.com/Dusch4593/nyt_bestsellers_cli",
     "demo_url": "",
@@ -14,6 +16,7 @@
     "description": "Users can search for the NYT Bestsellers List by date, filter by category and learn more"
   },
   {
+    "projectNo": 3,
     "title": "Weather App",
     "github_url": "https://github.com/Dusch4593/weather-app",
     "demo_url": "",
