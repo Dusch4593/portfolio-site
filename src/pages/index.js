@@ -34,10 +34,21 @@ const IndexPage = () => {
           <div className={aboutStyles.aboutInfo}>
             <img className={aboutStyles.aboutImage} srcSet={imageData}/>
             <p className={aboutStyles.aboutText}>
+            <h2>Hi! I'm Brandon </h2>
               Creative, dedicated software engineer based in Cape Cod, Massachussets, USA and living in North Chatham. <br />
               I'm a self-directed learner who enjoys solving interesting and complex problems. I also enjoy collaborating with <br />
               others on fun, challenging projects.
             </p>
+          </div>
+          <div className="technologies-section">
+            <div className="icon-gallery">
+              {/* Add some icons that represent each programming language and framework that I know and demonstrate on my portfolio. 
+                  The opacity should be less than one and the background should be a bright, cool color like a bright green or bright 
+                  cherry red.
+
+                  Google terms like "how to create a list of programming language icons for portfolio" and go from there.
+              */}
+            </div>
           </div>
       </section>
     </Layout>
