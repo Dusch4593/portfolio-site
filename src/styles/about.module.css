@@ -1,3 +1,21 @@
+.aboutSection {
+    margin: auto;
+    width: 90%;
+}
+
 .aboutInfo {
+    display: grid;
+    grid-template-areas: 'image text';
     margin-left: 0.5em;
+}
+
+.aboutImage {
+    border-radius: 0.25em;
+    grid-area: 'image';
+}
+
+.aboutText {
+    grid-area: 'text';
+    margin: auto;
+    max-width: 50%;
 }

@@ -12,26 +12,34 @@ import aboutStyles from "../styles/about.module.css"
 
 const IndexPage = () => {
   
-  const query = null
+  const query = useStaticQuery(graphql`
+  query MyQuery {
+    file(relativePath: {eq: "images/portfolio-site-image.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 375, maxHeight: 500) {
+          srcSet
+          src
+        }
+      }
+    }
+  }
+  `)
+
+  const imageData = query.file.childImageSharp.fluid.src
+
   return (
     <Layout>
       <SEO title="Home" />
-      /* About Section */
-      <section className="about-section">
+      <section className={aboutStyles.aboutSection}>
           <div className={aboutStyles.aboutInfo}>
-            <h1>Hi! I'm Brandon!</h1>
-            <p>
+            <img className={aboutStyles.aboutImage} srcSet={imageData}/>
+            <p className={aboutStyles.aboutText}>
               Creative, dedicated software engineer based in Cape Cod, Massachussets, USA and living in North Chatham. <br />
               I'm a self-directed learner who enjoys solving interesting and complex problems. I also enjoy collaborating with <br />
               others on fun, challenging projects.
             </p>
           </div>
       </section>
-      /* Portfolio Section */
-      /* Blog Section */
-      /* Contact Section */
-
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
     </Layout>
   )
 
