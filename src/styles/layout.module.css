@@ -13,6 +13,7 @@
 .mainContent {
     background-color: fbf4e1;
     grid-area: mainContent;
+    margin-bottom: 3em;
     margin-top: 3.25em;
     text-align: center;
 }

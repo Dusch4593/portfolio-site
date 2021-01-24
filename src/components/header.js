@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import headerStyles from "../styles/header.module.css"
 
 const Header = ({ menuLinks }) => {

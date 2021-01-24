@@ -1,11 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import { makeStyles } from "@material-ui/core/styles"
-import Button from "@material-ui/core/Button"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import aboutStyles from "../styles/about.module.css"
 
@@ -32,7 +27,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <section className={aboutStyles.aboutSection}>
           <div className={aboutStyles.aboutInfo}>
-            <img className={aboutStyles.aboutImage} srcSet={imageData}/>
+            <img className={aboutStyles.aboutImage} srcSet={imageData} alt="Brandon Dusch"/>
             <p className={aboutStyles.aboutText}>
             <h2>Hi! I'm Brandon </h2>
               Creative, dedicated software engineer based in Cape Cod, Massachussets, USA and living in North Chatham. <br />
@@ -53,7 +48,6 @@ const IndexPage = () => {
       </section>
     </Layout>
   )
-
 }
 
 export default IndexPage
