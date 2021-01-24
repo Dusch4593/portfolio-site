@@ -40,6 +40,13 @@ module.exports = {
         icon: `./data/images/brandon_dusch_profile_image.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-medium-feed',
+      options: {
+        userName: '@brandondusch',
+        name: 'MediumFeed'
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

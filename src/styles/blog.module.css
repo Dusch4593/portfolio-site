@@ -1,0 +1,46 @@
+.blogPostWrapper {
+    width: 90%;
+}
+
+.blogPostCard {
+    display: grid;
+    grid-template-areas: 'image info';
+    position: relative;
+    margin: 4em auto 0 auto;
+    width: 90%;
+}
+
+.blogPostImage {
+    border-radius: 0.5em;
+    grid-area: 'image';
+    margin: 0 auto 0 auto;
+}
+
+.blogPostInfo {
+    grid-area: 'info'
+}
+
+/* Desktop screens */
+@media only screen and (min-width: 768px) {
+    .blogPostImage {
+        width: 50%;
+    }
+}
+
+/* Tablet/ Mobile screens */
+@media only screen and (max-width: 600px) {
+    .blogPostCard {
+        grid-template-areas: 'image'
+                             'info';
+    }
+    .blogPostImage {
+        width: 80%;
+    }
+}
+
+/* In-between Tablet/ Mobile screens */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    .blogPostImage {
+        width: 80%;
+    }
+}
