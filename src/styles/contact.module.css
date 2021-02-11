@@ -13,6 +13,21 @@
     box-sizing: border-box;
 }
 
-.fileUpload {
+.contactLink {
+    color: #fff;
+    margin: 0 0.5em;
+    padding: 0.5em;
+}
 
+.githubLink {
+    background-color: #333333;
+}
+
+.linkedInLink {
+    background-color: #2867b2;
+}
+
+
+.twitterLink {
+    background-color: #1da1f2;
 }
