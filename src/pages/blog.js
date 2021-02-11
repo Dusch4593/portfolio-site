@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import BlogPost from '../components/blog-post'
+import BlogPost from '../components/blogPost'
 import {useStaticQuery, graphql} from 'gatsby'
 import blogStyles from '../styles/blog.module.css'
 

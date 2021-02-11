@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import ProjectCard from '../components/project-card.js'
+import ProjectCard from '../components/projectCard.js'
 import { useStaticQuery, graphql } from "gatsby"
 import portfolioStyles from "../styles/portfolio.module.css"
 
