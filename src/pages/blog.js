@@ -30,7 +30,6 @@ const Blog = () => {
       <SEO title="Blog" />
       <h2>My Writing on Medium</h2>
       <div className={blogStyles.blogPostWrapper}>
-
         {blogPosts.map(({node: post}) => 
           <BlogPost key={post.id} title={post.title} date={post.date} link={post.link} thumbnail={post.thumbnail} />
         )}
