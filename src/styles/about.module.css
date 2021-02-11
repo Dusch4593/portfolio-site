@@ -4,9 +4,8 @@
 }
 
 .aboutInfo {
-    background-color: #ffe4c4;
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
+    background-color: #ffcccb;
+    border-radius: 0.5em;
     display: grid;
     grid-template-areas: 'image text';
     margin-left: 0.5em;
