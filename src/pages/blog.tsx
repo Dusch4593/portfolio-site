@@ -1,9 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogPost from '../components/blogPost'
 import {useStaticQuery, graphql} from 'gatsby'
-import blogStyles from '../styles/blog.module.css'
+
+const blogStyles = require('../styles/blog.module.css')
 
 
 const Blog = () => {
@@ -30,7 +31,7 @@ const Blog = () => {
       <SEO title="Blog" />
       <h2>My Writing on Medium</h2>
       <div className={blogStyles.blogPostWrapper}>
-        {blogPosts.map(({node: post}) => 
+        {blogPosts.map(({node: post}: any) => 
           <BlogPost key={post.id} title={post.title} date={post.date} link={post.link} thumbnail={post.thumbnail} />
         )}
       </div>

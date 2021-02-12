@@ -73,7 +73,7 @@ module.exports = {
     ],
     description: `Portfolio site powered by Gatsby. Showcase for software engineering projects.`,
     author: `Brandon Dusch`,
-    keywords: ['software engineer', 'software developer', 'web developer', 'portfolio', 'projects'],
+    keywords: ['software engineer', 'software developer', 'web developer', 'frontend', 'fullstack'],
     contactLinks: {
       github: 'https://github.com/Dusch4593', 
       linkedin: 'https://www.linkedin.com/in/brandon-dusch-7818b966/', 

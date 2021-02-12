@@ -5,12 +5,27 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import * as React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
+interface SEOProps {
+  description?: string 
+  lang?: string 
+  meta?: Array<{
+    property: string 
+    content: any
+  }> 
+  image?: {
+    src: string 
+    height: number 
+    width: number
+  } 
+  title: string 
+  pathname?: string 
+}
+
+function SEO({ description='', lang='en', meta=[], image: metaImage, title, pathname }: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -27,7 +42,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  /*const image = metaImage && metaImage.src ? `${site.siteMetadata.siteUrl}${metaImage.src}` : null*/
+  const imageSrcString = metaImage && metaImage.src ? `${site.siteMetadata.siteUrl}${metaImage.src}` : null
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   return (
     <Helmet
@@ -76,28 +91,36 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: 'og:image',
+                  content: imageSrcString
+                },
+                {
+                  property: 'og:image:width',
+                  content: metaImage.width
+                },
+                {
+                  property: 'og:image:height',
+                  content: metaImage.height
+                },
+                {
+                  property: 'twitter:card',
+                  content: 'summary_large_image'
+                },
+              ]
+            : [
+                {
+                  property: 'twitter:card',
+                  content: 'summary'
+                },
+              ]
+        ).concat(meta)}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
-  pathname: PropTypes.string
 }
 
 export default SEO

@@ -1,9 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ProjectCard from '../components/projectCard.js'
 import { useStaticQuery, graphql } from "gatsby"
-import portfolioStyles from "../styles/portfolio.module.css"
+
+const portfolioStyles = require("../styles/portfolio.module.css")
 
 
 
@@ -37,7 +38,7 @@ const Portfolio = () => {
     <Layout>
       <SEO title="Portfolio" />
       <div className={portfolioStyles.portfolioWrapper}>
-        {projects.map(({node: project}) => {
+        {projects.map(({node: project}: any) => {
           const projectNo = project.projectNo
           const title = project.title
           const description = project.description
