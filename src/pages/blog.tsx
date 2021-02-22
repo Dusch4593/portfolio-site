@@ -34,6 +34,19 @@ const Blog = () => {
         }
       }
     }
+
+    allSite {
+      edges {
+        node {
+          siteMetadata {
+            blogLinks {
+              hashnode
+              medium
+            }
+          }
+        }
+      }
+    }
   }
   `)
 
@@ -41,19 +54,21 @@ const Blog = () => {
 
   const hashnodeBlogPosts = data.allDevblogPost.edges
 
+  const mediumBlogLink = data.allSite.edges[0].node.siteMetadata.blogLinks.medium
   
+  const hashnodeBlogLink = data.allSite.edges[0].node.siteMetadata.blogLinks.hashnode
 
   return (
     <Layout>
       <SEO title="Blog" />
-      <h2>My Writing on Medium</h2>
+      <h2>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h2>
       <div className={blogStyles.blogPostWrapper}>
         {mediumBlogPosts.map(({node: post}: any) => 
           <BlogPost key={post.id} title={post.title} date={post.date} link={post.link} thumbnail={post.thumbnail} />
         )}
       </div>
 
-      <h2>My Writing on Hashnode</h2>
+      <h2>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h2>
       <div className={blogStyles.blogPostWrapper}>
         {hashnodeBlogPosts.map(({node: post}: any) => 
           <BlogPost key={post.id} title={post.title} date={post.dateAdded} link={`https://blog.mydevdiary.net/${post.slug}-${post.cuid}`} thumbnail={post.coverImage}/>

@@ -84,6 +84,10 @@ module.exports = {
       github: 'https://github.com/Dusch4593', 
       linkedin: 'https://www.linkedin.com/in/brandon-dusch-7818b966/', 
       twitter: 'https://twitter.com/BrandonDusch'
+    },
+    blogLinks: {
+      medium: "https://brandondusch.medium.com/",
+      hashnode: "https://blog.mydevdiary.net/"
     }
   },
 }

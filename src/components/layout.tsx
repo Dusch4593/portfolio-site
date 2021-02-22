@@ -34,7 +34,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   const siteTitle = data.site.siteMetadata.title
   let menuLinks = data.site.siteMetadata.menuLinks
-  debugger
+  
   return (
     <React.Fragment>
       <div className={customLayoutStyles.mainGrid}>
