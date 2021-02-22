@@ -5,16 +5,19 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import * as React from "react"
+import { ReactNode }from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
-import customLayoutStyles from "../styles/layout.module.css"
-import footerStyles from "../styles/footer.module.css"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const customLayoutStyles = require("../styles/layout.module.css")
+const footerStyles = require("../styles/footer.module.css")
+
+interface LayoutProps {
+  children: ReactNode
+}
+const Layout = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -31,7 +34,7 @@ const Layout = ({ children }) => {
 
   const siteTitle = data.site.siteMetadata.title
   let menuLinks = data.site.siteMetadata.menuLinks
-
+  debugger
   return (
     <React.Fragment>
       <div className={customLayoutStyles.mainGrid}>
@@ -49,10 +52,6 @@ const Layout = ({ children }) => {
       </div>
     </React.Fragment>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

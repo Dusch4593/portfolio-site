@@ -1,9 +1,17 @@
-import React from 'react'
+import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import contactStyles from '../styles/contact.module.css'
+const contactStyles = require('../styles/contact.module.css')
+
+interface ContactLinksProps {
+  contactLinks: {
+    github: string
+    linkedin: string 
+    twitter: string
+  }
+}
 
 const ContactLinks = () => {
-    const data = useStaticQuery(graphql`
+    const data: any = useStaticQuery(graphql`
         query contactLinkQuery {
         allSite {
             edges {
@@ -21,11 +29,11 @@ const ContactLinks = () => {
         }
     `)
 
-    const contactLinks = data.allSite.edges[0].node.siteMetadata.contactLinks
+    const contactLinks: ContactLinksProps = data.allSite.edges[0].node.siteMetadata.contactLinks
 
-    const showLinks = (links) => {
+    const showLinks = (links: any) => {
         return Object.keys(links).map((link, index) => {
-          const formattedLink = link[0].toUpperCase() + link.slice(1)
+          const formattedLink: string = link[0].toUpperCase() + link.slice(1)
           let linkStyle = contactStyles.contactLink
           switch(link) {
             case 'github': 
@@ -41,8 +49,8 @@ const ContactLinks = () => {
               linkStyle += ' ' + ''
           }
     
-          
-          return <a href={links[link]} className={linkStyle} target='_blank' rel='noopener'>
+          let linkSrc = links[link]
+          return <a href={linkSrc} className={linkStyle} target='_blank' rel='noopener' key={index}>
             {formattedLink}
           </a>
         })

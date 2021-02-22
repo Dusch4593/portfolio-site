@@ -12,6 +12,7 @@
 
 .blogPostImage {
     border-radius: 0.5em;
+    width: 50%;
     grid-area: 'image';
     margin: 0 auto 0 auto;
 }
@@ -28,13 +29,13 @@
 }
 
 /* Tablet/ Mobile screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .blogPostCard {
         grid-template-areas: 'image'
                              'info';
     }
     .blogPostImage {
-        width: 80%;
+        width: 50%;
     }
 }
 

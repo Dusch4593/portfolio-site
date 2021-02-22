@@ -1,11 +1,20 @@
-import React from 'react'
-import Image from 'gatsby-image'
-import projectStyles from '../styles/portfolio.module.css'
+import * as React from 'react'
+import Img, { FluidObject } from 'gatsby-image'
 
-const ProjectCard = ({ demoURL, githubURL, imageData, title, description }) => {
+const projectStyles = require("../styles/portfolio.module.css")
+
+interface ProjectCardProps {
+  demoURL: string 
+  githubURL: string 
+  imageData: FluidObject 
+  title: string 
+  description?: string
+}
+
+const ProjectCard = ({ demoURL, githubURL, imageData, title, description }: ProjectCardProps) => {
   return(
     <div className="project-card">
-      <Image className={projectStyles.projectImage} fluid={ imageData } alt={ title } />
+      <Img className={projectStyles.projectImage} fluid={ imageData } alt={ title } />
       <div className={projectStyles.projectInfo}>
         <h2>{ title }</h2>
         <p>{ description }</p>

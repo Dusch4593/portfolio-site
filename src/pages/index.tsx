@@ -29,10 +29,10 @@ const IndexPage = () => {
       <section className={aboutStyles.aboutSection}>
           <div className={aboutStyles.aboutInfo}>
             <img className={aboutStyles.aboutImage} srcSet={imageData} alt="Brandon Dusch"/>
-            <p className={aboutStyles.aboutText}>
-            <h2>Hi! I'm Brandon </h2>
-            Creative full stack software engineer with a passion for learning and problem-solving. My attraction to tech stems from my prior background in music and public libraries, where I learned to work with patterns and build on top of them. I want to continue to grow and improve my new craft, and change the world for the better while doing it.
-            </p>
+            <div className={aboutStyles.aboutText}>
+              <h2>Hi! I'm Brandon </h2>
+              <p>Creative full stack software engineer with a passion for learning and problem-solving. My attraction to tech stems from my prior background in music and public libraries, where I learned to work with patterns and build on top of them. I want to continue to grow and improve my new craft, and change the world for the better while doing it.</p>
+            </div>
           </div>
       </section>
     </Layout>

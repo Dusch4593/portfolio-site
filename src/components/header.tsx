@@ -1,17 +1,25 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import headerStyles from "../styles/header.module.css"
+import * as React from "react"
 
-const Header = ({ menuLinks }) => {
+const headerStyles = require("../styles/header.module.css")
+
+export interface HeaderProps {
+  className?: string
+  siteTitle: string
+  menuLinks: Array<{
+    name: string 
+    link: string
+  }>
+}
+
+const Header = ({ menuLinks }: HeaderProps) => {
+
   return (
     <header className={headerStyles.headerContainer}>
       <div className={headerStyles.navWrapper}>
         <Link 
           className={headerStyles.headerTitle} 
           to={menuLinks[0].link}
-          target={menuLinks[0].target}
-          rel={menuLinks[0].rel}
         >
           Brandon Dusch
         </Link>
@@ -26,8 +34,6 @@ const Header = ({ menuLinks }) => {
                 <Link
                   className={headerStyles.navLink}
                   to={linkData.link}
-                  target={linkData.target}
-                  rel={linkData.rel}
                 >
                   {linkData.name}
                 </Link>
@@ -38,14 +44,6 @@ const Header = ({ menuLinks }) => {
       </div>
     </header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
