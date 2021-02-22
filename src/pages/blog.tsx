@@ -9,8 +9,8 @@ const blogStyles = require('../styles/blog.module.css')
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
-  query blogQuery {
-    allMediumFeedJson {
+  query mediumQuery {
+    allMediumFeedJson(limit: 4) {
       edges {
         node {
           id
@@ -21,18 +21,42 @@ const Blog = () => {
         }
       }
     }
+
+    allDevblogPost(limit: 4) {
+      edges {
+        node {
+          title
+          id
+          slug
+          coverImage
+          cuid
+          dateAdded(formatString: "MMMM DD, YYYY")
+        }
+      }
+    }
   }
   `)
 
-  const blogPosts = data.allMediumFeedJson.edges
+  const mediumBlogPosts = data.allMediumFeedJson.edges
+
+  const hashnodeBlogPosts = data.allDevblogPost.edges
+
+  
 
   return (
     <Layout>
       <SEO title="Blog" />
       <h2>My Writing on Medium</h2>
       <div className={blogStyles.blogPostWrapper}>
-        {blogPosts.map(({node: post}: any) => 
+        {mediumBlogPosts.map(({node: post}: any) => 
           <BlogPost key={post.id} title={post.title} date={post.date} link={post.link} thumbnail={post.thumbnail} />
+        )}
+      </div>
+
+      <h2>My Writing on Hashnode</h2>
+      <div className={blogStyles.blogPostWrapper}>
+        {hashnodeBlogPosts.map(({node: post}: any) => 
+          <BlogPost key={post.id} title={post.title} date={post.dateAdded} link={`https://blog.mydevdiary.net/${post.slug}-${post.cuid}`} thumbnail={post.coverImage}/>
         )}
       </div>
     </Layout>
