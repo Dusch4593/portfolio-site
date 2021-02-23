@@ -61,19 +61,21 @@ const Blog = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <h2>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h2>
-      <div className={blogStyles.blogPostWrapper}>
-        {mediumBlogPosts.map(({node: post}: any) => 
-          <BlogPost key={post.id} title={post.title} date={post.date} link={post.link} thumbnail={post.thumbnail} />
-        )}
-      </div>
+      <section>
+        <h2>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h2>
+        <div className={blogStyles.blogPostWrapper}>
+          {mediumBlogPosts.map(({node: post}: any) => 
+            <BlogPost key={post.id} title={post.title} date={post.date} link={post.link} thumbnail={post.thumbnail} />
+          )}
+        </div>
 
-      <h2>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h2>
-      <div className={blogStyles.blogPostWrapper}>
-        {hashnodeBlogPosts.map(({node: post}: any) => 
-          <BlogPost key={post.id} title={post.title} date={post.dateAdded} link={`https://blog.mydevdiary.net/${post.slug}-${post.cuid}`} thumbnail={post.coverImage}/>
-        )}
-      </div>
+        <h2>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h2>
+        <div className={blogStyles.blogPostWrapper}>
+          {hashnodeBlogPosts.map(({node: post}: any) => 
+            <BlogPost key={post.id} title={post.title} date={post.dateAdded} link={`https://blog.mydevdiary.net/${post.slug}-${post.cuid}`} thumbnail={post.coverImage}/>
+          )}
+        </div>
+      </section>
     </Layout>
   )
 }

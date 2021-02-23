@@ -11,9 +11,11 @@ const Contact = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <p>I'm available for part-time and full-time work. Feel free to contact me through any of the links</p><br/>
-      <ContactForm /><br/>
-      <ContactLinks />
+      <section>
+        <p>I'm available for part-time and full-time work. Feel free to contact me through any of the links</p><br/>
+        <ContactForm /><br/>
+        <ContactLinks />
+      </section>
     </Layout>
   )
 }

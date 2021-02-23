@@ -37,7 +37,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <div className={portfolioStyles.portfolioWrapper}>
+      <section className={portfolioStyles.portfolioWrapper}>
         {projects.map(({node: project}: any) => {
           const projectNo = project.projectNo
           const title = project.title
@@ -57,7 +57,7 @@ const Portfolio = () => {
             />
           )
         })}
-      </div>
+      </section>
 
     </Layout>
   )
