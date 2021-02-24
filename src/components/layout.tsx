@@ -45,8 +45,8 @@ const Layout = ({ children }: LayoutProps) => {
         <div className={customLayoutStyles.childWrapper}>
           <main className={customLayoutStyles.mainContent}>{children}</main>
           <footer className={footerStyles.footer}>
-            © {new Date().getFullYear()}, Built with
-            <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer"> &hearts; & Gatsby</a> by Brandon Dusch
+            Built with <a href="https://www.gatsbyjs.org" target="_blank" rel="noopener noreferrer"> &hearts; & Gatsby</a>, 
+             © {new Date().getFullYear()}
           </footer>
         </div>
       </div>
