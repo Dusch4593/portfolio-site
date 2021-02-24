@@ -15,7 +15,7 @@ export interface HeaderProps {
 
 const Header = ({ menuLinks }: HeaderProps) => {
 
-  const [toggleMenu, setToggle] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false)
 
   useEffect(() => {
     const callback = () => {
@@ -23,22 +23,14 @@ const Header = ({ menuLinks }: HeaderProps) => {
       navLinkList.style.display = window.innerWidth <= 700 ? 'none' : 'flex'
     }
     window.addEventListener('resize', callback)
-
-    window.addEventListener('DOMContentLoaded', callback)
   })
-
-  const toggleHamburgerMenu = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault()
-    const navLinkList: any = document.getElementsByClassName(headerStyles.navLinkList)[0]
-    if(toggleMenu) {
-      navLinkList.style.display = 'flex'
-    } else {
-      navLinkList.style.display = 'none'
-    }
-    setToggle(!toggleMenu)
+  
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    setToggleMenu(!toggleMenu)
   }
 
-  
+  let open = { display: 'flex' } 
+  let close = { display: 'none' }
 
   return (
     <header className={headerStyles.headerContainer}>
@@ -48,12 +40,12 @@ const Header = ({ menuLinks }: HeaderProps) => {
               Brandon Dusch
             </Link>
           </div>
-          <a href="#" className={headerStyles.hamburgerNavBtn} onClick={toggleHamburgerMenu}>
+          <div className={headerStyles.hamburgerNavBtn} onClick={handleClick}>
             <span className={headerStyles.hamburgerBar}></span>
             <span className={headerStyles.hamburgerBar}></span>
             <span className={headerStyles.hamburgerBar}></span>
-          </a>
-          <ul className={headerStyles.navLinkList}>
+          </div>
+          <ul className={headerStyles.navLinkList} style={toggleMenu ? open : close}>
             {menuLinks.map((linkData, index) => (
               <li key={index} className={headerStyles.navLinkListItem}>
                 <Link className={headerStyles.navLink} to={linkData.link}>
