@@ -17,20 +17,19 @@ const Header = ({ menuLinks }: HeaderProps) => {
 
   const [toggleMenu, setToggleMenu] = useState(false)
 
-  useEffect(() => {
-    const callback = () => {
-      const navLinkList: any = document.getElementsByClassName(headerStyles.navLinkList)[0]
-      navLinkList.style.display = window.innerWidth <= 700 ? 'none' : 'flex'
-    }
-    window.addEventListener('resize', callback)
-  })
-  
-  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleClick = (e: any) => {
     setToggleMenu(!toggleMenu)
   }
 
-  let open = { display: 'flex' } 
-  let close = { display: 'none' }
+  useEffect(() => {
+    const body = document.getElementsByTagName('body')[0]
+    body.onresize = () => {
+      if(window.innerWidth >= 700) {
+        setToggleMenu(false)
+        document.getElementsByTagName('ul')[0].className = headerStyles.navLinkList
+      }
+    }
+  }, [])
 
   return (
     <header className={headerStyles.headerContainer}>
@@ -45,7 +44,7 @@ const Header = ({ menuLinks }: HeaderProps) => {
             <span className={headerStyles.hamburgerBar}></span>
             <span className={headerStyles.hamburgerBar}></span>
           </div>
-          <ul className={headerStyles.navLinkList} style={toggleMenu ? open : close}>
+          <ul className={toggleMenu ? headerStyles.navLinkListActive : headerStyles.navLinkList}>
             {menuLinks.map((linkData, index) => (
               <li key={index} className={headerStyles.navLinkListItem}>
                 <Link className={headerStyles.navLink} to={linkData.link}>
