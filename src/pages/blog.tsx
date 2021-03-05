@@ -4,7 +4,9 @@ import SEO from '../components/seo'
 import BlogPost from '../components/blogPost'
 import {useStaticQuery, graphql} from 'gatsby'
 
-const blogStyles = require('../styles/blog.module.css')
+// @ts-ignore
+import * as blogStyles from '../styles/blog.module.css'
+
 
 
 const Blog = () => {
@@ -60,7 +62,7 @@ const Blog = () => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title='Blog' />
       <section>
         <h2>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h2>
         <div className={blogStyles.blogPostWrapper}>

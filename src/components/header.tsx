@@ -1,8 +1,8 @@
-import { Link } from "gatsby"
-import * as React from "react"
-import { useState, useEffect } from "react"
-
-const headerStyles = require("../styles/header.module.css")
+import { Link } from 'gatsby'
+import * as React from 'react'
+import { useState, useEffect } from 'react'
+// @ts-ignore
+import * as headerStyles from '../styles/header.module.css' 
 
 export interface HeaderProps {
   className?: string

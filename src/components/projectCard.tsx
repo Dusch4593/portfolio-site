@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Img, { FluidObject } from 'gatsby-image'
 
-const projectStyles = require("../styles/portfolio.module.css")
+// @ts-ignore
+import * as projectStyles from '../styles/portfolio.module.css'
 
 interface ProjectCardProps {
   demoURL: string 

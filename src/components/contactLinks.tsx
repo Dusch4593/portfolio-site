@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-const contactStyles = require('../styles/contact.module.css')
+// @ts-ignore
+import * as contactStyles from '../styles/contact.module.css'
 
 interface ContactLinksProps {
   contactLinks: {

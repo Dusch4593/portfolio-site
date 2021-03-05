@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import * as React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 interface SEOProps {
   description?: string 
@@ -52,7 +52,7 @@ function SEO({ description='', lang='en', meta=[], image: metaImage, title, path
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={
-        canonical ? [{ rel: "canonical", href: canonical,},] : []
+        canonical ? [{ rel: 'canonical', href: canonical,},] : []
       }
       meta={[
         {

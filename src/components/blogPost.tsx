@@ -1,5 +1,6 @@
 import * as React from 'react'
-const blogPostStyles = require('../styles/blog.module.css')
+// @ts-ignore
+import * as blogPostStyles from '../styles/blog.module.css'
 
 interface BlogPostProps {
   title: string 

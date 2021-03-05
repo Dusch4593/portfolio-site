@@ -1,9 +1,10 @@
-import * as React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { useStaticQuery, graphql } from 'gatsby'
 
-const aboutStyles = require("../styles/about.module.css")
+// @ts-ignore
+import * as aboutStyles from '../styles/about.module.css'
 
 
 const IndexPage = () => {
@@ -25,10 +26,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title='Home' />
       <section className={aboutStyles.aboutSection}>
           <div className={aboutStyles.aboutInfo}>
-            <img className={aboutStyles.aboutImage} srcSet={imageData} alt="Brandon Dusch"/>
+            <img className={aboutStyles.aboutImage} srcSet={imageData} alt='Brandon Dusch'/>
             <div className={aboutStyles.aboutText}>
               <h2>Hi! I'm Brandon </h2>
               <p>Creative full stack software engineer with a passion for learning and problem-solving. My attraction to tech stems from my prior background in music and public libraries, where I learned to work with patterns and build on top of them. I want to continue to grow and improve my new craft, and change the world for the better while doing it.</p>
