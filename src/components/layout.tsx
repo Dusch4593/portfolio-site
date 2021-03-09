@@ -41,9 +41,9 @@ const Layout = ({ children }: LayoutProps) => {
     <React.Fragment>
       <div className={customLayoutStyles.mainGrid}>
         <Header className={customLayoutStyles.mainMenu} menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
-        <div>
+        <p>
           &nbsp;
-        </div>
+        </p>
         <div className={customLayoutStyles.childWrapper}>
           <main className={customLayoutStyles.mainContent}>{children}</main>
           <footer className={footerStyles.footer}>
