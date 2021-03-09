@@ -66,15 +66,15 @@ module.exports = {
       },
       {
         name: 'portfolio',
-        link: '/portfolio',
+        link: '#portfolio',
       },
       {
         name: 'blog',
-        link: '/blog',
+        link: '#blog',
       },
       {
         name: 'contact',
-        link: '/contact',
+        link: '#contact',
       },
     ],
     description: `Portfolio site powered by Gatsby. Showcase for software engineering projects.`,
