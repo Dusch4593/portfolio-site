@@ -30,7 +30,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title='Home' />
-      <section className={aboutStyles.aboutSection}>
+      <section id='about' className={aboutStyles.aboutSection}>
           <div className={aboutStyles.aboutInfo}>
             <img className={aboutStyles.aboutImage} srcSet={imageData} alt='Brandon Dusch'/>
             <div className={aboutStyles.aboutText}>
@@ -51,7 +51,7 @@ const IndexPage = () => {
     <section id='contact'>
       <Contact/>
     </section>
-    </Layout>
+  </Layout>
   )
 }
 

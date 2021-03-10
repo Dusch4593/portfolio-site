@@ -9,12 +9,12 @@ import * as React from 'react'
 import { ReactNode }from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header'
+import NavMenu from './navMenu'
+import Footer from './footer'
 import './layout.css'
 
 // @ts-ignore
 import * as customLayoutStyles from '../styles/layout.module.css'
-// @ts-ignore
-import * as footerStyles from '../styles/footer.module.css'
 
 interface LayoutProps {
   children: ReactNode
@@ -40,17 +40,19 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <React.Fragment>
       <div className={customLayoutStyles.mainGrid}>
-        <Header className={customLayoutStyles.mainMenu} menuLinks={menuLinks} siteTitle={siteTitle.slice(0, siteTitle.indexOf(','))}/>
-        <p>
-          &nbsp;
-        </p>
-        <div className={customLayoutStyles.childWrapper}>
-          <main className={customLayoutStyles.mainContent}>{children}</main>
-          <footer className={footerStyles.footer}>
-            Built with <a href='https://www.gatsbyjs.org' target='_blank' rel='noopener noreferrer'> &hearts; & Gatsby</a>, 
-             © {new Date().getFullYear()}
-          </footer>
-        </div>
+        <section className={customLayoutStyles.headerSection} >
+          <Header siteTitle={siteTitle}/>
+        </section>
+        
+        <section className={customLayoutStyles.navMenuSection}>
+          <NavMenu  menuLinks={menuLinks} />
+        </section>
+        
+        <main className={customLayoutStyles.mainContent}>{children}</main>
+
+        <section className={customLayoutStyles.footerSection}>
+          <Footer  />
+        </section>  
       </div>
     </React.Fragment>
   )

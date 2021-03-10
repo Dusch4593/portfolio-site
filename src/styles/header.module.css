@@ -1,117 +1,25 @@
 .headerContainer {
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     width: 100%;
     z-index: 1;
 }
 
-.headerTitle a{
+.headerTitle a { 
     border-radius: 0.1em;
     color: #5689c7;
     margin-left: 1em;
     padding: 1rem; 
 }
 
+.headerTitle h1 {
+    margin-bottom: 0;
+}
+
 .headerTitle a:hover, .headerTitle a:focus {
     background-color: #5689c7;
     color: #fff;
     transition: 0.3s;
-}
-
-.hamburgerNavBtn {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1000;
-    right: 1em;
-    top: 1em;
-    border: none; 
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-}
-
-.hamburgerBar{
-    height: 3px;
-    width: 100%;
-    background-color: #5689c7;
-}
-
-.navWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1em auto;
-    max-width: 960;
-}
-
-.navLinkList {
-    display: flex;
-}
-
-.navLinkListItem {
-    list-style-type: none;
-    margin: 0 0.25em;
-}
-
-.navLink {
-    border: 1px solid transparent;
-    color: #5689c7;
-    padding: 1em;
-}
-
-.navLink:hover, .navLink:focus {
-    background-color: #5689c7;
-    border-radius: 0.1em;
-    color: #fff;
-    transition: 0.3s;
-}
-
-@media only screen and (max-width: 700px) {
-    .navWrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navLinkList {
-        display: none;
-        width: 100%;
-    }
-    
-    /* .navLinkList {
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 100%;
-    } */
-
-    .navLinkListActive {
-        background-color: #5689c7;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-top: 0.5em;
-        width: 100%;
-    }
-
-    .navLinkListItem {
-        text-align: center;
-    }
-
-    .navLink {
-        color: #ccdbee;
-        display: inline-block;
-        padding: 0.25em;
-        width: 100%;
-    }
-
-    .navLink:hover, .navLink:focus {
-        background: #fff;
-        border-radius: 0.1em;
-        color: #5689c7;
-        transition: 0.3s;
-    }
-
-    .hamburgerNavBtn{
-        display: flex;
-    }
 }
