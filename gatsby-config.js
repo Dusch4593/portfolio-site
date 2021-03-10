@@ -58,11 +58,11 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
   siteMetadata: {
-    title: `Brandon Dusch, Software Engineer - Official Portfolio Website`,
+    title: `Brandon Dusch`,
     menuLinks: [
       {
         name: 'home',
-        link: '/',
+        link: '#about',
       },
       {
         name: 'portfolio',
@@ -80,7 +80,7 @@ module.exports = {
     description: `Portfolio site powered by Gatsby. Showcase for software engineering projects.`,
     author: `Brandon Dusch`,
     keywords: ['software engineer', 'software developer', 'web developer', 'frontend', 'fullstack'],
-    contactLinks: {
+    socialLinks: {
       github: 'https://github.com/Dusch4593', 
       linkedin: 'https://www.linkedin.com/in/brandon-dusch-7818b966/', 
       twitter: 'https://twitter.com/BrandonDusch'
