@@ -59,6 +59,38 @@ const Blog = () => {
   
   const hashnodeBlogLink = data.allSite.edges[0].node.siteMetadata.blogLinks.hashnode
 
+  
+  const formatBlogPostLink = (...linkInfo: any[]) => {
+    const link = linkInfo[0] 
+    const slug = linkInfo[1]
+    const cuid = linkInfo[2]
+    if(slug && cuid) {
+      return `https://blog.mydevdiary.net/${slug}-${cuid}`
+    } else {
+      return link
+    }
+  }
+
+  const displayPosts = (posts: any) => {
+    return posts.map(({node : post}: any) => {
+    
+      const postID = post.id 
+      const title: string = post.title
+      const date: Date = post.date 
+      const link = formatBlogPostLink(post.link, post.slug, post.cuid)
+      const thumbnail: string = post.thumbnail || post.coverImage
+
+      const props = {
+        title, 
+        date,
+        link,
+        thumbnail
+      }
+
+      return <BlogPost key={postID} {...props} />
+    })
+  }
+
   return (
     <React.Fragment>
       <SEO title='Blog' />
@@ -66,18 +98,14 @@ const Blog = () => {
         <section id='mediumPostsSection'>
           <h2>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h2>
           <div className={blogStyles.blogPostWrapper}>
-            {mediumBlogPosts.map(({node: post}: any) => 
-              <BlogPost key={post.id} title={post.title} date={post.date} link={post.link} thumbnail={post.thumbnail} />
-            )}
+            {displayPosts(mediumBlogPosts)}
           </div>
         </section>
 
         <section id='hashnodePostsSection'>
           <h2>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h2>
           <div className={blogStyles.blogPostWrapper}>
-            {hashnodeBlogPosts.map(({node: post}: any) => 
-              <BlogPost key={post.id} title={post.title} date={post.dateAdded} link={`https://blog.mydevdiary.net/${post.slug}-${post.cuid}`} thumbnail={post.coverImage}/>
-            )}
+            {displayPosts(hashnodeBlogPosts)}
           </div>
         </section>
       </div>

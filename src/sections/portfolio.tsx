@@ -1,6 +1,7 @@
 import * as React from 'react'
 import SEO from '../components/seo'
 import ProjectCard from '../components/projectCard'
+import { nanoid } from 'nanoid'
 import { useStaticQuery, graphql } from 'gatsby'
 
 // @ts-ignore
@@ -37,22 +38,23 @@ const Portfolio = () => {
       <SEO title='Portfolio' />
       <div className={portfolioStyles.portfolioWrapper}>
         {projects.map(({node: project}: any) => {
-          const projectNo = project.projectNo
+          const projectID = nanoid()
           const title = project.title
           const description = project.description
           const demoURL = project.demo_url
           const githubURL = project.github_url
           const imageData = project.image.childImageSharp.fluid
+
+          const props = { 
+            title,
+            description,
+            demoURL,
+            githubURL,
+            imageData
+          }
           
           return (
-            <ProjectCard
-              key={projectNo}
-              title={title}
-              description={description}
-              demoURL={demoURL}
-              githubURL={githubURL}
-              imageData={imageData}
-            />
+            <ProjectCard key={projectID} {...props} />
           )
         })}
       </div>
