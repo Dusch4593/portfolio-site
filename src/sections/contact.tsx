@@ -9,9 +9,9 @@ const Contact = () => {
   return (
     <React.Fragment>
       <SEO title='Contact' />
-      <section>
+      <div className={contactStyles.contactWrapper}>
         <p>I'm available for part-time and full-time work. Feel free to contact me at brandondusch@gmail.com or through any of the link belows</p><br/>
-      </section>
+      </div>
     </React.Fragment>
   )
 }

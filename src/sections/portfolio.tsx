@@ -35,7 +35,7 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       <SEO title='Portfolio' />
-      <section className={portfolioStyles.portfolioWrapper}>
+      <div className={portfolioStyles.portfolioWrapper}>
         {projects.map(({node: project}: any) => {
           const projectNo = project.projectNo
           const title = project.title
@@ -55,7 +55,7 @@ const Portfolio = () => {
             />
           )
         })}
-      </section>
+      </div>
     </React.Fragment>
   )
 }
