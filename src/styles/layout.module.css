@@ -15,6 +15,7 @@
 }
 
 .headerSection {
+    border-bottom: 2px solid #a9a9a9;
     grid-area: header;
 }
 
@@ -23,12 +24,9 @@
 }
 
 .footerSection {
-    margin-top: 1.5em;
+    border-top: 2px solid #a9a9a9;
+    height: 25px;
     grid-area: footer;
-}
-
-.headerSection, .footerSection {
-    background-color: #626666;
 }
 
 @media only screen and (min-width: 700px) {
@@ -48,6 +46,7 @@
     }
     
     .navMenuSection {
+        border-right: 1px solid #a9a9a9;
         display: block;
         grid-area: nav;
     }

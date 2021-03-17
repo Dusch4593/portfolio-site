@@ -7,19 +7,15 @@
     z-index: 1;
 }
 
-.headerTitle a { 
-    border-radius: 0.1em;
+.headerTitle { 
     color: #5689c7;
-    margin-left: 1em;
-    padding: 1rem; 
 }
 
 .headerTitle h1 {
     margin-bottom: 0;
 }
 
-.headerTitle a:hover, .headerTitle a:focus {
-    background-color: #5689c7;
+.headerTitle:hover, .headerTitle:focus {
     color: #fff;
     transition: 0.3s;
 }
