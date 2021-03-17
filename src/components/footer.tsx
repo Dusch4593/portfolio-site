@@ -1,12 +1,10 @@
 import * as React from 'react'
-import SocialLinks from '../components/socialLinks'
 //@ts-ignore
 import * as footerStyles from '../styles/footer.module.css'
 
 const Footer = () => {
     return (
         <footer className={footerStyles.footer}>
-            <SocialLinks />
             Built with <a href='https://www.gatsbyjs.org' target='_blank' rel='noopener noreferrer'> &hearts; & Gatsby</a>, 
             © {new Date().getFullYear()}
         </footer>

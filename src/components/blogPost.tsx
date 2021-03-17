@@ -12,7 +12,6 @@ interface BlogPostProps {
 
 
 const BlogPost = ({ title, date, link, thumbnail }: BlogPostProps) => {
-  
   return(
     < React.Fragment>
       <div className={blogPostStyles.blogPostCard}>

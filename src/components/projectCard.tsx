@@ -13,10 +13,11 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ demoURL, githubURL, imageData, title, description }: ProjectCardProps) => {
+  const passedAlt = title
   return(
     <React.Fragment>
       <div className="project-card">
-        <Img className={projectStyles.projectImage} fluid={ imageData } alt={ title } />
+        <Img className={projectStyles.projectImage} fluid={imageData} alt={title} />
         <div className={projectStyles.projectInfo}>
           <h2>{ title }</h2>
           <p>{ description }</p>
