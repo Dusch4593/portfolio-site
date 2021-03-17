@@ -25,7 +25,7 @@
 
 .footerSection {
     border-top: 2px solid #a9a9a9;
-    height: 25px;
+    height: 7.5em;
     grid-area: footer;
 }
 
@@ -49,5 +49,9 @@
         border-right: 1px solid #a9a9a9;
         display: block;
         grid-area: nav;
+    }
+
+    .footerSection {
+        height: 25px;
     }
 }

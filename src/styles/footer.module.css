@@ -1,7 +1,12 @@
 .footer {
-    bottom: 0;
     left: 0;
     position: absolute;
     text-align: center;
     width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+    .footer {
+        bottom: 0;
+    }
 }
