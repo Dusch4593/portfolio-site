@@ -632,13 +632,11 @@ pre tt:after {
 }
 
 html, body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #ccdbee;;
+  background-color: rgba(204, 219, 238, 0.1)
 }
 /* End of custom styling */

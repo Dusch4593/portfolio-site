@@ -4,6 +4,7 @@
         'header' 
         'mainContent'
         'footer';
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
     position: relative;
 }
@@ -25,7 +26,7 @@
 
 .footerSection {
     border-top: 2px solid #a9a9a9;
-    height: 7.5em;
+    height: 1.5em;
     grid-area: footer;
 }
 

@@ -8,6 +8,10 @@
     padding: 0.5em;
 }
 
+.socialLink:visited {
+    color: #fff;
+}
+
 .githubLink {
     background-color: #333333;
 }
