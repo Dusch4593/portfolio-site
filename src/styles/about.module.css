@@ -1,37 +1,39 @@
-.aboutSection {
-    margin: auto;
-    width: 78%;
+.aboutWrapper {
+    margin-top: 15px;
 }
 
 .aboutInfo {
     border-radius: 0.5em;
     display: grid;
-    grid-template-areas: 'image text';
-    margin-left: 0.5em;
-    padding: 1em;
-}
-
-@media only screen and (max-width: 800px) {
-    .aboutInfo {
-        grid-template-areas: 'image'
-                             'text';
-    }
-
-    .aboutImage {
-        margin: auto;
-        width: 50%; 
-    }
+    grid-template-areas: 'image'
+    'text';
 }
 
 .aboutImage {
-    object-fit: cover;
-    width: 50%;
     border-radius: 0.5em;
     grid-area: 'image';
+    margin: auto;
+    object-fit: cover;
+    max-width: 75%;
 }
 
 .aboutText {
     grid-area: 'text';
-    margin: auto;
-    max-width: 50%;
+}
+
+@media only screen and (min-width: 700px) {
+    .aboutWrapper {
+        margin: auto;
+        width: 78%;
+    }
+
+    .aboutInfo {
+        grid-template-areas: 'image text';
+        margin-left: 0.5em;
+        padding: 1em;
+    }
+
+    .aboutText {
+        margin: auto;
+    }
 }
