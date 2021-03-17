@@ -5,7 +5,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -628,8 +627,13 @@ pre tt:after {
 /*End of default styling*/
 
 /* Beginning of custom styling */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
+  overflow: hidden;
   padding: 0;
 }
 
