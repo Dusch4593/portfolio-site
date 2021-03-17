@@ -37,8 +37,9 @@ const Portfolio = () => {
     <React.Fragment>
       <SEO title='Portfolio' />
       <div className={portfolioStyles.portfolioWrapper}>
+        <h3>Projects</h3>
         {projects.map(({node: project}: any) => {
-          const projectID = nanoid()
+          const projectID = nanoid() // assigns a unique, randomly-generated string as an id
           const title = project.title
           const description = project.description
           const demoURL = project.demo_url
