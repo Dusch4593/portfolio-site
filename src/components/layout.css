@@ -640,7 +640,16 @@ body {
   background-color: rgba(204, 219, 238, 0.1)
 }
 
-a {
-  color: #5689c7;
+div > a > h4, div > a, h2 > a {
+  color: #172C45;
+  text-decoration: underline;
+}
+
+div > a > h4:hover, div > a:hover, h2 > a:hover {
+  background: #ffff99
+}
+
+a:visited {
+
 }
 /* End of custom styling */
