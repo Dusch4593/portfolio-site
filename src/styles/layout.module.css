@@ -1,18 +1,16 @@
 .mainGrid {
     display: grid;
-    grid-template-areas:
-      'header header'
-      'nav mainContent'
-      'footer footer';
+    grid-template-areas: 
+        'header' 
+        'mainContent'
+        'footer';
     height: 100vh;
     position: relative;
 }
-  
+
 .mainContent {
     grid-area: mainContent;
-    grid-column: 2 / 3;
-    margin-bottom: 3em;
-    overflow: auto;
+    overflow-y: scroll;
     text-align: center;
 }
 
@@ -20,24 +18,37 @@
     grid-area: header;
 }
 
+.navMenuSection {
+    display: none;
+}
+
 .footerSection {
+    margin-top: 1.5em;
     grid-area: footer;
 }
 
 .headerSection, .footerSection {
-    grid-column: 1 / -1;
+    background-color: #626666;
 }
 
-.navMenuSection {
-    grid-area: nav;
-}
-
-
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 700px) {
     .mainGrid {
-        grid-template-areas: 
-            'header' 
-            'mainContent'
-            'footer';
+        grid-template-areas:
+          'header header'
+          'nav mainContent'
+          'footer footer';
+    }
+
+    .mainContent {
+        grid-column: 2 / 3;
+    }
+    
+    .headerSection, .footerSection {
+        grid-column: 1 / -1;
+    }
+    
+    .navMenuSection {
+        display: block;
+        grid-area: nav;
     }
 }
