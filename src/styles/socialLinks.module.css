@@ -1,3 +1,13 @@
+.socialLinksSection {
+    margin-bottom: 1em;
+}
+
+.socialLink {
+    color: #fff;
+    margin: 0 0.5em;
+    padding: 0.5em;
+}
+
 .githubLink {
     background-color: #333333;
 }

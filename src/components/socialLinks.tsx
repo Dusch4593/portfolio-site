@@ -35,7 +35,7 @@ const SocialLinks = () => {
     const showLinks = (links: any) => {
         return Object.keys(links).map((link, index) => {
           const formattedLink: string = link[0].toUpperCase() + link.slice(1)
-          let linkStyle = socialLinksStyles.contactLink
+          let linkStyle = socialLinksStyles.socialLink
           switch(link) {
             case 'github': 
               linkStyle += ' ' + socialLinksStyles.githubLink
@@ -59,7 +59,9 @@ const SocialLinks = () => {
       }
     return (
         <React.Fragment>
+          <section className={socialLinksStyles.socialLinksSection}>
             {showLinks(socialLinks)}
+          </section>
         </React.Fragment>
     )
 }
