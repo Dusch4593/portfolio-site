@@ -94,7 +94,8 @@ const Blog = () => {
   return (
     <React.Fragment>
       <SEO title='Blog' />
-      <div className={blogStyles.blogWrapper}>   
+      <div className={blogStyles.blogWrapper}>  
+        <h3>Blog</h3> 
         <section id='mediumPostsSection'>
           <h2>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h2>
           <div className={blogStyles.blogPostWrapper}>
