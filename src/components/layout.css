@@ -622,7 +622,7 @@ pre tt:after {
   font-family: 'Baumans';
   font-style: normal;
   font-weight: 400;
-  src: local('Baumans'), local('Baumans-Regular'), url(http://themes.googleusercontent.com/static/fonts/baumans/v2/BiCYinjVo5CiJRvPKlJf5g.ttf) format('truetype');
+  src: local('Baumans'), local('Baumans-Regular'), url(https://themes.googleusercontent.com/static/fonts/baumans/v2/BiCYinjVo5CiJRvPKlJf5g.ttf) format('truetype');
 }
 /*End of default styling*/
 
@@ -632,14 +632,13 @@ pre tt:after {
 }
 
 html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
-  overflow: hidden;
   padding: 0;
 }
 
 body {
   background-color: #ccdbee;;
-  height: 100vh;
-  width: 100vw;
 }
 /* End of custom styling */
