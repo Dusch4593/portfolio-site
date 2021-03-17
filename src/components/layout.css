@@ -639,4 +639,8 @@ html, body {
 body {
   background-color: rgba(204, 219, 238, 0.1)
 }
+
+a {
+  color: #5689c7;
+}
 /* End of custom styling */
