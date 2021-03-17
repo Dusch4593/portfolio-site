@@ -637,7 +637,7 @@ html, body {
 }
 
 body {
-  background-color: rgba(204, 219, 238, 0.1)
+  /* background-color: rgba(204, 219, 238, 0.1) */
 }
 
 div > a > h4, div > a, h2 > a {

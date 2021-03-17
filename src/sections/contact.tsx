@@ -12,7 +12,7 @@ const Contact = () => {
       <SEO title='Contact' />
       <h3>Contact</h3>
       <div className={contactStyles.contactWrapper}>
-        <p>I'm available for part-time and full-time work. Feel free to contact me at brandondusch@gmail.com or through any of the link belows</p><br/>
+        <p>I'm available for full-time work. Feel free to contact me at brandondusch@gmail.com or through any of the links below</p><br/>
       </div>
       <SocialLinks />
     </React.Fragment>

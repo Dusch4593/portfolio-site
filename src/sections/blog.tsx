@@ -97,14 +97,14 @@ const Blog = () => {
       <div className={blogStyles.blogWrapper}>  
         <h3>Blog</h3> 
         <section id='mediumPostsSection'>
-          <h2>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h2>
+          <h3>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h3>
           <div className={blogStyles.blogPostWrapper}>
             {displayPosts(mediumBlogPosts)}
           </div>
         </section>
 
         <section id='hashnodePostsSection'>
-          <h2>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h2>
+          <h3>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h3>
           <div className={blogStyles.blogPostWrapper}>
             {displayPosts(hashnodeBlogPosts)}
           </div>

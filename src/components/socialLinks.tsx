@@ -34,17 +34,22 @@ const SocialLinks = () => {
     
     const showLinks = (links: any) => {
         return Object.keys(links).map((link, index) => {
-          const formattedLink: string = link[0].toUpperCase() + link.slice(1)
+          // const formattedLink: string = link[0].toUpperCase() + link.slice(1)
+          let socialLinkIcon: string | undefined = undefined
           let linkStyle = socialLinksStyles.socialLink
+
           switch(link) {
             case 'github': 
               linkStyle += ' ' + socialLinksStyles.githubLink
+              socialLinkIcon = 'fa fa-github'
               break
             case 'linkedin':
               linkStyle += ' ' + socialLinksStyles.linkedInLink
+              socialLinkIcon = 'fa fa-linkedin'
               break
             case 'twitter':
               linkStyle += ' ' + socialLinksStyles.twitterLink
+              socialLinkIcon = 'fa fa-twitter'
               break
             default: 
               linkStyle += ' ' + ''
@@ -53,7 +58,8 @@ const SocialLinks = () => {
           let linkSrc = links[link]
           
           return <a href={linkSrc} className={linkStyle} target='_blank' rel='noopener' key={index}>
-            {formattedLink}
+            {/* {formattedLink} */}
+            <i className={socialLinkIcon}></i>
           </a>
         })
       }
