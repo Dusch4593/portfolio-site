@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Img, { FluidObject } from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // @ts-ignore
 import * as projectStyles from '../styles/portfolio.module.css'
@@ -7,17 +7,16 @@ import * as projectStyles from '../styles/portfolio.module.css'
 interface ProjectCardProps {
   demoURL: string 
   githubURL: string 
-  imageData: FluidObject 
+  imageData: any 
   title: string 
   description?: string
 }
 
 const ProjectCard = ({ demoURL, githubURL, imageData, title, description }: ProjectCardProps) => {
-  const passedAlt = title
-  return(
+  return (
     <React.Fragment>
       <div className="project-card">
-        <Img className={projectStyles.projectImage} fluid={imageData} alt={title} />
+        <GatsbyImage image={imageData} className={projectStyles.projectImage} alt={title} />
         <div className={projectStyles.projectInfo}>
           <h3>{ title }</h3>
           <p>{ description }</p>
@@ -27,7 +26,7 @@ const ProjectCard = ({ demoURL, githubURL, imageData, title, description }: Proj
         </div>
       </div>
     </React.Fragment>
-  )
+  );
 }
 
 export default ProjectCard

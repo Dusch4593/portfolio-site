@@ -5,31 +5,28 @@ import { nanoid } from 'nanoid'
 import { useStaticQuery, graphql } from 'gatsby'
 
 // @ts-ignore
-import portfolioStyles from '../styles/portfolio.module.css'
+import * as portfolioStyles from '../styles/portfolio.module.css'
 
 const Portfolio = () => {
 
-  const query = useStaticQuery(graphql`
-      query projectImagesQuery {
-      allProjectsJson {
-        edges {
-          node {
-            title
-            description
-            github_url
-            demo_url
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+  const query = useStaticQuery(graphql`query projectImagesQuery {
+  allProjectsJson {
+    edges {
+      node {
+        title
+        description
+        github_url
+        demo_url
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
     }
-  `)
+  }
+}
+`)
 
   const projects = query.allProjectsJson.edges
 
@@ -39,12 +36,12 @@ const Portfolio = () => {
       <div className={portfolioStyles.portfolioWrapper}>
         <h3>Projects</h3>
         {projects.map(({node: project}: any) => {
-          const projectID = nanoid() // assigns a unique, randomly-generated string as an id
-          const title = project.title
-          const description = project.description
-          const demoURL = project.demo_url
-          const githubURL = project.github_url
-          const imageData = project.image.childImageSharp.fluid
+          const projectID: string = nanoid() // assigns a unique, randomly-generated string as an id
+          const title: string = project.title
+          const description: string = project.description
+          const demoURL: string = project.demo_url
+          const githubURL: string = project.github_url
+          const imageData = project.image.childImageSharp.gatsbyImageData
 
           const props = { 
             title,
@@ -60,7 +57,7 @@ const Portfolio = () => {
         })}
       </div>
     </React.Fragment>
-  )
+  );
 }
 
 export default Portfolio

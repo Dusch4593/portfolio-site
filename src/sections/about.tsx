@@ -5,20 +5,21 @@ import { useStaticQuery, graphql } from 'gatsby'
 import * as aboutStyles from '../styles/about.module.css'
 
 const About = () => {
-    const query = useStaticQuery(graphql`
-    query MyQuery {
-      file(relativePath: {eq: "images/portfolio-site-image.jpg"}) {
-        childImageSharp {
-          fluid(maxWidth: 375, maxHeight: 500) {
-            srcSet
-            src
-          }
-        }
-      }
+    const query = useStaticQuery(graphql`query MyQuery {
+  file(relativePath: {eq: "images/portfolio-site-image.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(
+        width: 375
+        height: 500
+        placeholder: BLURRED
+        layout: CONSTRAINED
+      )
     }
-    `)
+  }
+}
+`)
   
-    const imageData = query.file.childImageSharp.fluid.src
+    const imageData = query.file.childImageSharp.gatsbyImageData.src
 
     return (
         <React.Fragment>
