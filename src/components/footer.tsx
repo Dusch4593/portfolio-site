@@ -1,6 +1,6 @@
 import * as React from 'react'
 //@ts-ignore
-import * as footerStyles from '../styles/footer.module.css'
+import { footerStyles } from '../styles/footer.module.css'
 
 const Footer = () => {
     return (

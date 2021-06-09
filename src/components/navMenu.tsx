@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 // @ts-ignore
-import navMenuStyles from '../styles/navMenu.module.css' 
+import { navMenuStyles } from '../styles/navMenu.module.css' 
 
 interface NavMenuProps {
     menuLinks: Array<{

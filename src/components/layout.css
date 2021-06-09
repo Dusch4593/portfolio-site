@@ -629,15 +629,18 @@ pre tt:after {
 /* Beginning of custom styling */
 * {
   box-sizing: border-box;
-}
-
-html, body {
   margin: 0;
   padding: 0;
 }
 
+/* html, body {
+  margin: 0;
+  padding: 0;
+} */
+
 body {
   /* background-color: rgba(204, 219, 238, 0.1) */
+  min-height: 100vh;
 }
 
 div > a > h4, div > a, h2 > a {
@@ -647,9 +650,5 @@ div > a > h4, div > a, h2 > a {
 
 div > a > h4:hover, div > a:hover, h2 > a:hover {
   background: #ffff99
-}
-
-a:visited {
-
 }
 /* End of custom styling */

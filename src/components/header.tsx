@@ -1,6 +1,6 @@
 import * as React from 'react'
 // @ts-ignore
-import * as headerStyles from '../styles/header.module.css' 
+import { headerStyles } from '../styles/header.module.css' 
 
 interface HeaderProps {
   siteTitle: string

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 // @ts-ignore
-import * as aboutStyles from '../styles/about.module.css'
+import { aboutStyles } from '../styles/about.module.css'
 
 const About = () => {
     const query = useStaticQuery(graphql`query MyQuery {

@@ -3,7 +3,7 @@ import SEO from '../components/seo'
 import SocialLinks from '../components/socialLinks'
 
 // @ts-ignore
-import * as contactStyles from '../styles/contact.module.css'
+import { contactStyles } from '../styles/contact.module.css'
 
 const Contact = () => {
   
