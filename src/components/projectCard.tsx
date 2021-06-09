@@ -2,7 +2,7 @@ import * as React from 'react'
 import { GatsbyImage } from "gatsby-plugin-image";
 
 // @ts-ignore
-import { projectStyles } from '../styles/portfolio.module.css'
+import * as projectStyles from '../styles/portfolio.module.css'
 
 interface ProjectCardProps {
   demoURL: string 

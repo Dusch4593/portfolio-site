@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid'
 import { useStaticQuery, graphql } from 'gatsby'
 
 // @ts-ignore
-import { portfolioStyles } from '../styles/portfolio.module.css'
+import * as portfolioStyles from '../styles/portfolio.module.css'
 
 const Portfolio = () => {
 

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 // @ts-ignore
-import { socialLinksStyles } from '../styles/socialLinks.module.css'
+import * as socialLinksStyles from '../styles/socialLinks.module.css'
 
 interface SocialLinksProps {
   socialLinks: {

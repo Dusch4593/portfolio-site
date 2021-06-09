@@ -4,7 +4,7 @@ import BlogPost from '../components/blogPost'
 import {useStaticQuery, graphql} from 'gatsby'
 
 // @ts-ignore
-import { blogStyles } from '../styles/blog.module.css'
+import * as blogStyles from '../styles/blog.module.css'
 
 
 

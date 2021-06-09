@@ -14,7 +14,7 @@ import Footer from './footer'
 import './layout.css'
 
 // @ts-ignore
-import { customLayoutStyles } from '../styles/layout.module.css'
+import * as customLayoutStyles from '../styles/layout.module.css'
 
 interface LayoutProps {
   children: ReactNode

@@ -1,6 +1,6 @@
 import * as React from 'react'
 // @ts-ignore
-import { blogPostStyles } from '../styles/blog.module.css'
+import * as blogPostStyles from '../styles/blog.module.css'
 
 interface BlogPostProps {
   title: string 
