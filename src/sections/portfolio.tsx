@@ -6,6 +6,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 // @ts-ignore
 import * as portfolioStyles from '../styles/portfolio.module.css'
+// @ts-ignore
+import * as globalStyles from '../styles/globals.module.css'
 
 const Portfolio = () => {
 
@@ -34,7 +36,7 @@ const Portfolio = () => {
     <React.Fragment>
       <SEO title='Portfolio' />
       <div className={portfolioStyles.portfolioWrapper}>
-        <h3>Projects</h3>
+        <h2 className={globalStyles.sectionHeader}>Projects</h2>
         {projects.map(({node: project}: any) => {
           const projectID: string = nanoid() // assigns a unique, randomly-generated string as an id
           const title: string = project.title

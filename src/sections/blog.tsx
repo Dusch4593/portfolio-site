@@ -5,6 +5,8 @@ import {useStaticQuery, graphql} from 'gatsby'
 
 // @ts-ignore
 import * as blogStyles from '../styles/blog.module.css'
+// @ts-ignore
+import * as globalStyles from '../styles/globals.module.css'
 
 
 
@@ -94,17 +96,17 @@ const Blog = () => {
   return (
     <React.Fragment>
       <SEO title='Blog' />
+      <h2 className={globalStyles.sectionHeader}>Blog</h2> 
       <div className={blogStyles.blogWrapper}>  
-        <h3>Blog</h3> 
         <section id='mediumPostsSection'>
-          <h3>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h3>
+          <h3 className={globalStyles.sectionHeader}>My Writing on <a href={mediumBlogLink} target='_target' rel='noopener'>Medium</a></h3>
           <div className={blogStyles.blogPostWrapper}>
             {displayPosts(mediumBlogPosts)}
           </div>
         </section>
 
         <section id='hashnodePostsSection'>
-          <h3>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h3>
+          <h3 className={globalStyles.sectionHeader}>My Writing on <a href={hashnodeBlogLink} target='_target' rel='noopener'>Hashnode</a></h3>
           <div className={blogStyles.blogPostWrapper}>
             {displayPosts(hashnodeBlogPosts)}
           </div>
